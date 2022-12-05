@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.tabela{
+  // margin-top:20%;
+   margin: 75px auto;
+   width:1024px;
+   display: block;
+}
+.menu-table{
+  width:100%;
+}
+.delete-buttonCustom{
+  color: #c20000;
+}
+.over-whole-form{
+  width: 95%;
+}
+.first-of-two{
+  margin-right: 25px;
+   width:55%;
+}
+.second-of-two{
+  width:35%;
+}
+mat-card-title{
+  margin-bottom:15px;
+}
+.createColor{
+  color:#00A5F3;
+}
+.createColor:hover{
+  background-color:#00A5F3;
+  color:white;
+}
+.backButton:hover{
+  background-color: red;
+  color: aliceblue;
+}
+.backButton{
+  color:red;
+}
+.material-icon-custom2{
+  background-color: #FF9800;
+  color:#FAFAFA;
+
+}
+.material-icon-custom-rectangle{
+  color: #FAFAFA;
+  border: 1px solid black;
+}
+.table-dialog {
+  position: relative;
+  z-index: 2000  ;
+}
+.info-icon {
+  color:#00A5F3;
+
+}
+

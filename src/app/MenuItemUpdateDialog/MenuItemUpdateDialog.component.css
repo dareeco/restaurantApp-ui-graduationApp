@@ -1,0 +1,13 @@
+.over-whole-form{
+  width: 95%;
+}
+.first-of-two{
+  margin-right: 25px;
+   width:55%;
+}
+.second-of-two{
+  width:35%;
+}
+mat-card-title{
+  margin-bottom:15px;
+}

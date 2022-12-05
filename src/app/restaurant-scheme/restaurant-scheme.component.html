@@ -1,0 +1,20 @@
+<body>
+
+<img src="assets/images/RestaurantImage.jpg"  class="bar-scheme">
+<button mat-fab  class="table1"  style=" background-color: #FF9800;"  aria-label="Example icon button with a delete icon">
+  <mat-icon class="material-icon-custom2 " >circle</mat-icon>
+</button>
+<button mat-fab  class="table2"  style=" background-color: #FF9800;"  aria-label="Example icon button with a delete icon">
+  <mat-icon class="material-icon-custom2 " >circle</mat-icon>
+</button>
+<button mat-fab id="table3" [matMenuTriggerFor]="menu"   class="table3"    aria-label="Example icon button with a delete icon">
+  <mat-icon   >circle</mat-icon>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="openDialog(12)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass()">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass()">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table3')">Reserve the table</button>
+  </mat-menu>
+</button>
+<mat-icon class="material-icon-custom-rectangle table4"  >rectangle</mat-icon>
+</body>

@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>
+  Update this menu item:
+</h1>
+<mat-dialog-content>
+  <mat-form-field appearance="fill" class="first-of-two">
+    <mat-label>Name</mat-label>
+    <input matInput [formControl]="nameFormControl">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="second-of-two">
+    <mat-label>Price</mat-label>
+    <input matInput [formControl]="priceFormControl">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="over-whole-form">
+    <mat-label>Description</mat-label>
+    <input matInput [formControl]="descriptionFormControl">
+  </mat-form-field>
+
+
+</mat-dialog-content>
+<mat-card-actions align="end">
+  <button mat-button mat-dialog-close class="backButton">BACK</button>
+  <button mat-button (click)="updateMenuItem()" mat-dialog-close class="createColor">SAVE</button>
+</mat-card-actions>
