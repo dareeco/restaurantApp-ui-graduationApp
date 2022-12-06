@@ -21,6 +21,8 @@ import { RestaurantSchemeComponent } from './restaurant-scheme/restaurant-scheme
 import { TableDialogComponent } from './table-dialog/table-dialog.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatMenuModule} from '@angular/material/menu';
+import { OrderComponent } from './order/order.component';
+import { OrderUpdateDialogComponent } from './order-update-dialog/order-update-dialog.component';
 
 
 
@@ -33,7 +35,9 @@ import {MatMenuModule} from '@angular/material/menu';
        MenuItemUpdateDialogComponent,
        MenuItemAddDialogComponent,
        RestaurantSchemeComponent,
-       TableDialogComponent
+       TableDialogComponent,
+       OrderComponent,
+       OrderUpdateDialogComponent
    ],
   imports: [
     BrowserModule,

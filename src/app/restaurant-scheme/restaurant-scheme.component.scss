@@ -6,45 +6,78 @@
    margin-right:15%;
    z-index: -1
 }
-#table3{
-  color: white;
+#table1, #table2, #table3,#table4, #table5, #table6, #table7, #table8, #table9, #table10, #table11{
+  color:white;
 }
 .active{
   background-color: wheat;
 }
-.reserved{
-  background-color: yellow;
-}
-.freed{
-  background-color: green;
-}
-.taken{
-  background-color: red;
-}
 .table1{
-  position:fixed;
- //z-index: 1001;   //I need this in order to display the button over the picture
-  margin-left: 58.6%;
-  margin-top:9.25%;
-  transform: scale(0.5) //Changing the size of the button
+  position:absolute;
+  margin-left: 58%;
+  margin-top:9.1%;
+  transform: scaleX(1.5);
 }
 .table2{
-  position:fixed;
-  //z-index: 1001;   //I need this in order to display the button over the picture
-  margin-left: 35%;
-  margin-top:19.75%;
-  transform: scale(0.35) //Changing the size of the button
+  position:absolute;
+  margin-left: 34.5%;
+  margin-top:19.2%;
+  scale: 1.2 0.7//Scale by x&y axis
 }
 .table3{
-  position:fixed;
- // z-index: 1001;   //I need this in order to display the button over the picture
-  margin-left: 37.5%;
-  margin-top:17%;
-  transform: scale(0.35) //Changing the size of the button
+  position:absolute;
+  margin-left: 37.1%;
+  margin-top:16.4%;
+  scale: 1.2 0.7//Scale by x&y axis
 }
 .table4{
-  position: fixed;
-  margin-left:69%;
-  margin-top:10.2%;
+  position: absolute;
+  margin-left:67.5%;
+  margin-top:9%;
+  transform: scaleX(1.3);
 }
+.table5{
+  position: absolute;
+  margin-left:77.5%;
+  margin-top:9%;
+  transform: scaleX(1.3);
+
+}
+.table6{
+  position:absolute;
+  margin-left:72.5%;
+  margin-top:9%;
+  transform: scaleX(1.3);
+}
+.table7{
+  position:absolute;
+  margin-left:69%;
+  margin-top:14.4%;
+  transform: scaleX(1.3);
+}
+.table8{
+  position:absolute;
+  margin-left:76%;
+  margin-top:14.4%;
+  transform: scaleX(1.3);
+}
+.table9{
+  position:absolute;
+  margin-left:76.8%;
+  margin-top:20.6%;
+  scale: 2.8 1;
+}
+.table10{
+  position:absolute;
+  margin-left:76.8%;
+  margin-top:24.8%;
+  scale: 2.8 1;
+}
+.table11{
+  position:absolute;
+  margin-left:68%;
+  margin-top:24.8%;
+  scale: 2.8 1;
+}
+
 

@@ -33,16 +33,16 @@ export class RestaurantSchemeComponent implements OnInit {
 
   setReservedClass(name: string){
 
-    document.getElementById(name)?.style.setProperty('background-color', 'yellow');
+    document.getElementById(name)?.style.setProperty('color', 'yellow');
     }
 
-  setFreedClass(){
-    document.getElementById('table3')?.style.setProperty('background-color', 'green');
+  setFreedClass(name: string){
+    document.getElementById(name)?.style.setProperty('color', 'green');
 
   }
-  setTakenClass(){
+  setTakenClass(name: string){
 
-    document.getElementById('table3')?.style.setProperty('background-color', 'red');
+    document.getElementById(name)?.style.setProperty('color', 'red');
 
   }
 }

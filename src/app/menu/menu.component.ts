@@ -59,7 +59,6 @@ export class MenuComponent implements OnInit {
 
   }
   deleteDetails(id: number){
-    console.log("Arrived Here");
     this.menuService.deleteMenuItem(id).subscribe(() => {
       const data = this.dataSource.data;
       const index = data.findIndex((item: any) => item.id === id);

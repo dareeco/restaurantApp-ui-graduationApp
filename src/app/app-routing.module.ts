@@ -1,3 +1,4 @@
+import { OrderComponent } from './order/order.component';
 import { MenuComponent } from './menu/menu.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,6 +12,9 @@ const routes: Routes = [
   },
   {
     path:'bar', component: RestaurantSchemeComponent
+  },
+  {
+    path:'order', component: OrderComponent
   }
 ];
 

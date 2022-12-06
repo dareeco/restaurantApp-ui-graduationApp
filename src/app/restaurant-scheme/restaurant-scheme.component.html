@@ -1,20 +1,105 @@
 <body>
 
 <img src="assets/images/RestaurantImage.jpg"  class="bar-scheme">
-<button mat-fab  class="table1"  style=" background-color: #FF9800;"  aria-label="Example icon button with a delete icon">
-  <mat-icon class="material-icon-custom2 " >circle</mat-icon>
+<button mat-button id="table1" [matMenuTriggerFor]="menu8" class="table1">
+  <mat-icon>circle</mat-icon>
+  <mat-menu #menu8="matMenu">
+    <button mat-menu-item (click)="openDialog(10)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table1')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table1')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table1')">Reserve the table</button>
+  </mat-menu>
 </button>
-<button mat-fab  class="table2"  style=" background-color: #FF9800;"  aria-label="Example icon button with a delete icon">
-  <mat-icon class="material-icon-custom2 " >circle</mat-icon>
+<button mat-button id="table2" [matMenuTriggerFor]="menu7" class="table2">
+  <mat-icon>circle</mat-icon>
+  <mat-menu #menu7="matMenu">
+    <button mat-menu-item (click)="openDialog(11)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table2')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table2')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table2')">Reserve the table</button>
+  </mat-menu>
 </button>
-<button mat-fab id="table3" [matMenuTriggerFor]="menu"   class="table3"    aria-label="Example icon button with a delete icon">
-  <mat-icon   >circle</mat-icon>
+<button mat-button id="table3" [matMenuTriggerFor]="menu"   class="table3">
+  <mat-icon>circle</mat-icon>
   <mat-menu #menu="matMenu">
     <button mat-menu-item (click)="openDialog(12)">Add Food or Drinks</button>
-    <button mat-menu-item (click)="setTakenClass()">The table is taken</button>
-    <button mat-menu-item (click)="setFreedClass()">The table is free</button>
+    <button mat-menu-item (click)="setTakenClass('table3')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table3')">The table is free</button>
     <button mat-menu-item (click)="setReservedClass('table3')">Reserve the table</button>
   </mat-menu>
 </button>
-<mat-icon class="material-icon-custom-rectangle table4"  >rectangle</mat-icon>
+<button mat-button id="table4" [matMenuTriggerFor]="menu2" class="table4">
+  <mat-icon >rectangle</mat-icon>
+  <!--You got to change the name of the menu or it will apply to table3!-->
+  <mat-menu #menu2="matMenu">
+    <button mat-menu-item (click)="openDialog(13)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table4')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table4')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table4')">Reserve the table</button>
+  </mat-menu>
+</button>
+<button mat-button id="table5" [matMenuTriggerFor]="menu3" class="table5">
+  <mat-icon >rectangle</mat-icon>
+  <mat-menu #menu3="matMenu">
+    <button mat-menu-item (click)="openDialog(14)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table5')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table5')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table5')">Reserve the table</button>
+  </mat-menu>
+</button>
+<button mat-button id="table6" [matMenuTriggerFor]="menu4" class="table6">
+  <mat-icon >rectangle</mat-icon>
+  <mat-menu #menu4="matMenu">
+    <button mat-menu-item (click)="openDialog(15)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table6')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table6')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table6')">Reserve the table</button>
+  </mat-menu>
+</button>
+<button mat-button id="table7" [matMenuTriggerFor]="menu5" class="table7">
+  <mat-icon >rectangle</mat-icon>
+  <mat-menu #menu5="matMenu">
+    <button mat-menu-item (click)="openDialog(16)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table7')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table7')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table7')">Reserve the table</button>
+  </mat-menu>
+</button>
+<button mat-button id="table8" [matMenuTriggerFor]="menu6" class="table8">
+  <mat-icon >rectangle</mat-icon>
+  <mat-menu #menu6="matMenu">
+    <button mat-menu-item (click)="openDialog(17)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table8')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table8')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table8')">Reserve the table</button>
+  </mat-menu>
+</button>
+<button mat-button id="table9" [matMenuTriggerFor]="menu9" class="table9">
+  <mat-icon >rectangle</mat-icon>
+  <mat-menu #menu9="matMenu">
+    <button mat-menu-item (click)="openDialog(18)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table9')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table9')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table9')">Reserve the table</button>
+  </mat-menu>
+</button>
+<button mat-button id="table10" [matMenuTriggerFor]="menu10" class="table10">
+  <mat-icon >rectangle</mat-icon>
+  <mat-menu #menu10="matMenu">
+    <button mat-menu-item (click)="openDialog(19)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table10')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table10')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table10')">Reserve the table</button>
+  </mat-menu>
+</button>
+<button mat-button id="table11" [matMenuTriggerFor]="menu11" class="table11">
+  <mat-icon >rectangle</mat-icon>
+  <mat-menu #menu11="matMenu">
+    <button mat-menu-item (click)="openDialog(20)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table11')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table11')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table11')">Reserve the table</button>
+  </mat-menu>
+</button>
+
 </body>

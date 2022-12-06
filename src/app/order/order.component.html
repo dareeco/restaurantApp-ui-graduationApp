@@ -1,0 +1,47 @@
+<mat-card class="tabela"> <!--The mat-card position is determined by the .tabela in style.scss-->
+  <mat-card-title>
+    <h1>Drinks</h1>
+</mat-card-title>
+
+  <mat-card-content>
+    <table mat-table  [dataSource]="dataSource" class="menu-table mat-elevation-z0"> <!--z8,z7,z6 is the shadow we get on this element, we don't want shadow-->
+      <ng-container matColumnDef="orderType">
+        <th mat-header-cell *matHeaderCellDef> Order Type </th>
+        <td mat-cell *matCellDef="let element"> {{element.orderType}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="orderSpecificName">
+        <th mat-header-cell *matHeaderCellDef> Order Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.orderSpecificName}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="quantity" >
+        <th mat-header-cell *matHeaderCellDef> Quantity  </th>
+        <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+      </ng-container>
+
+      <!-- Full Name Column -->
+      <ng-container matColumnDef="quantityType" >
+        <th mat-header-cell *matHeaderCellDef>Quantity Type</th>
+        <td mat-cell *matCellDef="let element"> {{element.quantityType}} </td>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+         <td mat-cell *matCellDef="let element">
+          <button mat-icon-button (click)="openUpdateDialog(element.id)"  aria-label="Example icon button with a home icon">
+            <!-- Put the name of the icon from fonts.google.com it will show up automaticaly -->
+            <mat-icon class="info-icon" >info</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteDetails(element.id)" aria-label="Example icon button with a home icon">
+            <!-- Put the name of the icon from fonts.google.com it will show up automaticaly -->
+            <mat-icon class="delete-buttonCustom">delete</mat-icon>
+          </button>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+  </mat-card-content>
+</mat-card>
