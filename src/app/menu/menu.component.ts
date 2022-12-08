@@ -5,7 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { MenuItem } from '../menuItem';
-import { MenuItemUpdateDialogComponent } from '../MenuItemUpdateDialog/MenuItemUpdateDialog.component';
+import { MenuItemUpdateDialogComponent } from '../menu-item-update-dialog/MenuItemUpdateDialog.component';
 import { MenuItemAddDialogComponent } from '../menu-item-add-dialog/menu-item-add-dialog.component';
 
 

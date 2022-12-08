@@ -49,4 +49,14 @@ mat-card-title{
   color:#00A5F3;
 
 }
+#place-div{
+  margin-top:5%;
+  margin-right: 7.5%;
+  display: flex;
+  flex-direction: row-reverse; //this property is for displaying from right to left instead left to right
+}
+.material-icon-custom{
+  background-color: #FF9800;
+  color:#FAFAFA;
+}
 

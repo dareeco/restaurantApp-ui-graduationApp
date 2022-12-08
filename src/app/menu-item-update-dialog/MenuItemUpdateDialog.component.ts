@@ -39,9 +39,8 @@ export class MenuItemUpdateDialogComponent implements OnInit {
     this.menuItem.name=this.nameFormControl.value;
     this.menuItem.description=this.descriptionFormControl.value;
     this.menuItem.price=this.priceFormControl.value;
-    console.log("Dojdov");
     this.MenuService.updateMenuItem(this.data.id,this.menuItem).subscribe(() =>{
-      
+
     });
 
 

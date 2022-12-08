@@ -1,3 +1,4 @@
+import { OrderAddDialogComponent } from './../order-add-dialog/order-add-dialog.component';
 import { OrderService } from './../order.service';
 import { Order } from './../order';
 import { Component, OnInit } from '@angular/core';
@@ -41,6 +42,15 @@ export class OrderComponent implements OnInit {
     })
   }
 
+  openAddDialog(){
+    let dialogRef=this.dialog.open(OrderAddDialogComponent,{
+      width: '768px'
+    });
+    dialogRef.afterClosed().subscribe(() => {
+      this.refreshPage();
+    })
+  }
+
   deleteDetails(id: number){
     this.orderService.deleteOrder(id).subscribe(() => {
       const data = this.dataSource.data;  //Update table that hide the picked for deletion element
@@ -49,6 +59,7 @@ export class OrderComponent implements OnInit {
       this.dataSource.data = data;
     });
   }
+
 
   refreshPage(){ //function for refrehing page
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;

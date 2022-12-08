@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>
+  Update this order:
+</h1>
+<mat-dialog-content>
+  <mat-form-field appearance="fill" class="first-of-two">
+    <mat-label>Order Type: </mat-label>
+    <input matInput [formControl]="orderTypeFormControl">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="second-of-two">
+    <mat-label>Specific Name of the Ordered Item:</mat-label>
+    <input matInput [formControl]="orderSpecificNameFormControl">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="over-whole-form">
+    <mat-label>Quantity</mat-label>
+    <input matInput [formControl]="quantityFormControl">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="over-whole-form">
+    <mat-label>Quantity Type</mat-label>
+    <input matInput [formControl]="quantityTypeFormControl">
+  </mat-form-field>
+
+</mat-dialog-content>
+<mat-card-actions align="end">
+  <button mat-button mat-dialog-close class="backButton">BACK</button>
+  <button mat-button (click)="addOrder()" mat-dialog-close class="createColor">SAVE</button>
+</mat-card-actions>

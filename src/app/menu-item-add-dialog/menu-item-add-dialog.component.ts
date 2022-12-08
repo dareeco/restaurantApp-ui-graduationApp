@@ -36,7 +36,7 @@ export class MenuItemAddDialogComponent implements OnInit {
       })
     }
     else{
-      alert("Error while creating new item for the menu.");
+      alert("Please fill the required fields");
     }
   }
 
