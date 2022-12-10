@@ -1,6 +1,16 @@
 <body>
-
-<img src="assets/images/RestaurantImage.jpg"  class="bar-scheme">
+  <mat-toolbar class="fixed-header">
+    <button mat-icon-button (click)="navigateToOrders()" style="margin-right:1%;">
+      <h1>Orders</h1>
+    </button>
+    <button mat-icon-button (click)="navigateToMenuItems()" style="margin-right:5%;">
+      <h1 >Menu Items</h1>
+    </button>
+    <img src="assets/images/Logo.png" class="logo-position">
+    <span style=" margin-right: 41.5%;">Bar </span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+<img src="assets/images/Restaurant_image-removebg-preview.png"  class="bar-scheme">
 <button mat-button id="table1" [matMenuTriggerFor]="menu8" class="table1">
   <mat-icon>circle</mat-icon>
   <mat-menu #menu8="matMenu">
@@ -209,4 +219,55 @@
     <button mat-menu-item (click)="setReservedClass('table23')">Reserve the table</button>
   </mat-menu>
 </button>
+<button mat-button id="table24" [matMenuTriggerFor]="menu24" class="table24">
+  <mat-icon >rectangle</mat-icon>
+  <mat-menu #menu24="matMenu">
+    <button mat-menu-item (click)="openDialog(33)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table24')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table24')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table24')">Reserve the table</button>
+  </mat-menu>
+</button>
+<button mat-button id="table25" [matMenuTriggerFor]="menu25" class="table25">
+  <mat-icon >rectangle</mat-icon>
+  <mat-menu #menu25="matMenu">
+    <button mat-menu-item (click)="openDialog(34)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table25')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table25')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table25')">Reserve the table</button>
+  </mat-menu>
+</button>
+<button mat-button id="table26" [matMenuTriggerFor]="menu26" class="table26">
+  <mat-icon >rectangle</mat-icon>
+  <mat-menu #menu26="matMenu">
+    <button mat-menu-item (click)="openDialog(35)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table26')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table26')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table26')">Reserve the table</button>
+  </mat-menu>
+</button>
+<button mat-button id="table27" [matMenuTriggerFor]="menu27" class="table27">
+  <mat-icon >rectangle</mat-icon>
+  <mat-menu #menu27="matMenu">
+    <button mat-menu-item (click)="openDialog(36)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('table27')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('table27')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('table27')">Reserve the table</button>
+  </mat-menu>
+</button>
+<button mat-button id="counter" [matMenuTriggerFor]="menu28" class="counter">
+  <mat-icon >circle</mat-icon>
+  <mat-menu #menu28="matMenu">
+    <button mat-menu-item (click)="openDialog(37)">Add Food or Drinks</button>
+    <button mat-menu-item (click)="setTakenClass('counter')">The table is taken</button>
+    <button mat-menu-item (click)="setFreedClass('counter')">The table is free</button>
+    <button mat-menu-item (click)="setReservedClass('counter')">Reserve the table</button>
+  </mat-menu>
+</button>
+<mat-toolbar class="fixed-footer">
+  <h1><a href="https://www.linkedin.com/in/darko-ristevski/">Developer's Profile</a></h1>
+  <img src="assets/images/linkedinlogo.png" style="height:100%; margin-right:0.5%;">
+  <img src="assets/images/footerIcon.png" class="logo-position-footer">
+  <h1>Darko Ristevski, 186065 <mat-icon>person</mat-icon></h1>
+</mat-toolbar>
 </body>

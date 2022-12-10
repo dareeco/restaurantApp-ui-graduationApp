@@ -1,11 +1,12 @@
 import { OrderAddDialogComponent } from './../order-add-dialog/order-add-dialog.component';
 import { OrderService } from './../order.service';
 import { Order } from './../order';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { OrderUpdateDialogComponent } from '../order-update-dialog/order-update-dialog.component';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-order',
@@ -16,6 +17,7 @@ export class OrderComponent implements OnInit {
   public dataSource = new MatTableDataSource<Order>(); //we need to import datasource variable if we want the table in the html to work
   public displayedColumns: string[] = ['orderType', 'orderSpecificName', 'quantity', 'quantityType', 'actions']; //what columns are we displaying
   orders: Order[];
+  @ViewChild(MatPaginator) paginator: MatPaginator;
   constructor(
     public orderService: OrderService,
     private router: Router,
@@ -23,6 +25,10 @@ export class OrderComponent implements OnInit {
     public dialog: MatDialog
   ) { }
 
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator; //to refresh table and put on other pages
+  }
+  
   ngOnInit(): void {
    this.orderService.getOrders().subscribe((data:any) => {
       this.orders=data;
@@ -67,7 +73,17 @@ export class OrderComponent implements OnInit {
     this.router.navigate(['./'], {
       relativeTo: this.route
     })
+  }
+
+  navigateToBar(){
+    this.router.navigate(['bar']);
 
   }
+
+  navigateToMenuItems(){
+    this.router.navigate(['menu']);
+
+  }
+
 
 }

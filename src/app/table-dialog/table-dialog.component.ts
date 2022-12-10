@@ -1,10 +1,12 @@
 import { TableService } from './../table.service';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MenuService } from '../menu.service';
 import { MenuItem } from '../menuItem';
+import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+
 
 @Component({
   selector: 'app-table-dialog',
@@ -21,6 +23,9 @@ export class TableDialogComponent implements OnInit {
   menuItems2:MenuItem[];
   public totalSum:number;
   public table:any;
+  @ViewChild('paginator') paginator: MatPaginator;
+  @ViewChild('paginator2') paginator2: MatPaginator;
+
 
   constructor(
     public menuService: MenuService,
@@ -53,6 +58,10 @@ export class TableDialogComponent implements OnInit {
     })
 
   }
+  ngAfterViewInit() {
+    this.dataSource.paginator=this.paginator2;
+    this.dataSource2.paginator = this.paginator; //to refresh table and put on other pages
+  }
 
   addDrink(name: string){
     const tableid=this.data.tableId;
@@ -81,6 +90,7 @@ export class TableDialogComponent implements OnInit {
         this.TotalSum();
       })
     });
+    this.ngAfterViewInit();
   }
 
   clearTable(){

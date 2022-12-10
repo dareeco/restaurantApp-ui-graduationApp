@@ -1,5 +1,9 @@
 body {
-  background-image: url("../BarPicture.jpg");
-  background-repeat: repeat;
+  background-image: url("/assets/images/BarPicture.jpg");
+  background-repeat: no-repeat;
+  overflow-y:scroll;
+  background-size: cover;
+  min-height: 100vh;
+
 }
 

@@ -1,12 +1,13 @@
 
 import { MenuService } from './../menu.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { MenuItem } from '../menuItem';
 import { MenuItemUpdateDialogComponent } from '../menu-item-update-dialog/MenuItemUpdateDialog.component';
 import { MenuItemAddDialogComponent } from '../menu-item-add-dialog/menu-item-add-dialog.component';
+import { MatPaginator } from '@angular/material/paginator';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class MenuComponent implements OnInit {
   public dataSource = new MatTableDataSource<MenuItem>(); //we need to import datasource variable if we want the table in the html to work
   public displayedColumns: string[] = ['id', 'name', 'description', 'price', 'actions']; //what columns are we displaying
   menuItems: MenuItem[];  //In order this to not throw error in tsconfig.json I added "strictPropertyInitialization": false,
+  @ViewChild(MatPaginator) paginator: MatPaginator;
   constructor(
     public menuService: MenuService,
     private router: Router,
@@ -25,7 +27,9 @@ export class MenuComponent implements OnInit {
     public dialog: MatDialog
 
   ) { }
-
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator; //to refresh table and put on other pages
+  }
   ngOnInit(): void {
     this.menuService.getMenuItems().subscribe((data:any) => {
         this.menuItems=data;
@@ -73,6 +77,16 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['./'], {
       relativeTo: this.route
     })
+
+  }
+
+  navigateToBar(){
+    this.router.navigate(['bar']);
+
+  }
+
+  navigateToOrders(){
+    this.router.navigate(['order']);
 
   }
 

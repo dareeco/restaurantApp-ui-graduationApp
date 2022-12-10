@@ -1,13 +1,18 @@
 <body>
-<mat-toolbar class="fixed-header " style="background-color: #854D27;">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
+<mat-toolbar class="fixed-header">
+  <button mat-icon-button (click)="navigateToOrders()" style="margin-right:1%;">
+    <h1>Orders</h1>
   </button>
-  <span style="color: white; margin:auto;">Menu Items </span>
+  <button mat-icon-button (click)="navigateToBar()" style="margin-right:5%;">
+    <h1 >Bar</h1>
+  </button>
+  <img src="assets/images/Logo.png" class="logo-position">
+
+  <span style=" margin-right: 36%;">Menu Items </span>
   <span class="example-spacer"></span>
 </mat-toolbar>
 
-<mat-card class="tabela"> <!--The mat-card position is determined by the .tabela in style.scss-->
+<mat-card class="tabela opacity"> <!--The mat-card position is determined by the .tabela in style.scss-->
   <mat-card-title>
     <h1>Drinks</h1>
 </mat-card-title>
@@ -38,11 +43,11 @@
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef>Actions</th>
          <td mat-cell *matCellDef="let element">
-          <button mat-icon-button (click)="openUpdateDialog(element.id)" aria-label="Example icon button with a home icon">
+          <button mat-icon-button (click)="openUpdateDialog(element.id)" title="Edit this menu item">
             <!-- Put the name of the icon from fonts.google.com it will show up automaticaly -->
-            <mat-icon class="info-icon" >info</mat-icon>
+            <mat-icon class="info-icon">edit_note</mat-icon>
           </button>
-          <button mat-icon-button (click)="deleteDetails(element.id)" aria-label="Example icon button with a home icon">
+          <button mat-icon-button (click)="deleteDetails(element.id)" title="Delete this menu item">
             <!-- Put the name of the icon from fonts.google.com it will show up automaticaly -->
             <mat-icon class="delete-buttonCustom">delete</mat-icon>
           </button>
@@ -50,14 +55,23 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+    <mat-paginator showFirstLastButton [pageSizeOptions]="[5,3,1]"></mat-paginator>
 
 
   </mat-card-content>
 </mat-card>
 <div id="place-div">
-<button mat-fab color="secondary" (click)="openAddDialog()"  style=" background-color: #FF9800;"  aria-label="Example icon button with a delete icon">
+<button mat-fab color="secondary" (click)="openAddDialog()"  style=" background-color: #FF9800;"  title="Add menu item">
   <mat-icon class="material-icon-custom" >add_container</mat-icon>
 </button>
 </div>
+<mat-toolbar class="fixed-footer">
+  <h1><a href="https://www.linkedin.com/in/darko-ristevski/">Developer's Profile</a></h1>
+  <img src="assets/images/linkedinlogo.png" style="height:100%; margin-right:0.5%;">
+  <img src="assets/images/footerIcon.png" class="logo-position-footer">
+  <h1>Darko Ristevski, 186065 <mat-icon>person</mat-icon></h1>
+</mat-toolbar>
 </body>
+
+
 

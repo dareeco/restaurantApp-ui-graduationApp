@@ -13,11 +13,11 @@
 .tabela3{
 
    width: 340px;
-   display: inline-block;
+  //  display: inline-block;
 }
 h2{
   margin-left: 2.5%;
-  display: inline-block;
+  // display: inline-block;
   height: 50%;
 }
 b{
@@ -25,5 +25,12 @@ b{
 }
 .addDrink{
   color:#FF9800
+}
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
 }
 

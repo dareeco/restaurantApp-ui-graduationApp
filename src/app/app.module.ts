@@ -24,6 +24,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { OrderComponent } from './order/order.component';
 import { OrderUpdateDialogComponent } from './order-update-dialog/order-update-dialog.component';
 import { OrderAddDialogComponent } from './order-add-dialog/order-add-dialog.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -58,7 +59,8 @@ import { OrderAddDialogComponent } from './order-add-dialog/order-add-dialog.com
     MatIconModule,
     MatToolbarModule,
     MatTabsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatPaginatorModule
 
 
   ],

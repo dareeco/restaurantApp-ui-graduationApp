@@ -8,6 +8,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
    width:1024px;
    display: block;
 }
+.opacity{
+  opacity: 0.9;
+}
 .menu-table{
   width:100%;
 }
@@ -46,17 +49,47 @@ mat-card-title{
   z-index: 2000  ;
 }
 .info-icon {
-  color:#00A5F3;
+  color: rgb(26, 122, 26);
 
 }
 #place-div{
-  margin-top:5%;
   margin-right: 7.5%;
+  margin-top: -3.5%;
   display: flex;
   flex-direction: row-reverse; //this property is for displaying from right to left instead left to right
 }
 .material-icon-custom{
   background-color: #FF9800;
   color:#FAFAFA;
+}
+.fixed-header {
+    direction:rtl;
+    color:#D58C3A;
+    background-color: #11150C;
+}
+.fixed-footer{
+  direction: rtl;
+  position: sticky;
+  margin-bottom:0;
+  height: 5vh;
+  color:#D58C3A;
+  background-color: #11150C;
+  top: 100vh;
+}
+.logo-position{
+  height: 100%;
+  margin-right: 35%;
+}
+.logo-position-footer{
+  height: 100%;
+  margin-right: 30%;
+  margin-left:24%;
+}
+a:visited{
+  color:#D58C3A;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
 }
 

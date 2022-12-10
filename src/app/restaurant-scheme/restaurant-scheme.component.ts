@@ -45,4 +45,14 @@ export class RestaurantSchemeComponent implements OnInit {
     document.getElementById(name)?.style.setProperty('color', 'red');
 
   }
+
+  navigateToMenuItems(){
+    this.router.navigate(['menu']);
+
+  }
+
+  navigateToOrders(){
+    this.router.navigate(['order']);
+
+  }
 }
