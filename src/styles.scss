@@ -1,9 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .tabela{
-  // margin-top:20%;
    margin: 75px auto;
    width:1024px;
    display: block;
@@ -30,19 +28,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 mat-card-title{
   margin-bottom:15px;
 }
-.createColor{
-  color:#00A5F3;
+.dialog-button:hover{
+  background-color: #D58C3A;
+  color:#11150C
 }
-.createColor:hover{
-  background-color:#00A5F3;
-  color:white;
-}
-.backButton:hover{
-  background-color: red;
-  color: aliceblue;
-}
-.backButton{
-  color:red;
+.dialog-button{
+  background-color: #11150C;
+  color: #D58C3A;
 }
 .table-dialog {
   position: relative;
@@ -59,8 +51,8 @@ mat-card-title{
   flex-direction: row-reverse; //this property is for displaying from right to left instead left to right
 }
 .material-icon-custom{
-  background-color: #FF9800;
-  color:#FAFAFA;
+  background-color: #D58C3A;
+  color:#11150C;
 }
 .fixed-header {
     direction:rtl;
