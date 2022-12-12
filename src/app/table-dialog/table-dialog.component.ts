@@ -19,9 +19,10 @@ export class TableDialogComponent implements OnInit {
   menuItems: MenuItem[];  //In order this to not throw error in tsconfig.json I added "strictPropertyInitialization": false,
   //Below we get only the menu Items that are on this table
   public dataSource2=new MatTableDataSource<MenuItem>();
-  public displayedColumns2: string[] = ['name',  'price'];
+  public displayedColumns2: string[] = ['name',  'price', 'actions'];
   menuItems2:MenuItem[];
   public totalSum:number;
+  public tableName:string;
   public table:any;
   @ViewChild('paginator') paginator: MatPaginator;
   @ViewChild('paginator2') paginator2: MatPaginator;
@@ -53,7 +54,7 @@ export class TableDialogComponent implements OnInit {
     this.route.params.subscribe((params: any) => {
       this.tableService.findTableById(tableid).subscribe((table) => {
         this.table=table;
-        this.TotalSum();
+        this.TotalSumAndName();
       })
     })
 
@@ -70,9 +71,16 @@ export class TableDialogComponent implements OnInit {
     });
 
   }
+  removeDrink(name: string){
+    const tableid=this.data.tableId;
+    this.tableService.removeMenuItemFromGivenTable(tableid,name).subscribe(()=>{
+        this.refreshTable();
+    });
+  }
 
-  private TotalSum(){
+  private TotalSumAndName(){
     this.totalSum=this.table.totalSum;
+    this.tableName=this.table.tableName;
   }
 
   refreshTable(){   //Function for updating Drinks and total sum of the current table
@@ -87,7 +95,7 @@ export class TableDialogComponent implements OnInit {
     this.route.params.subscribe((params: any) => {
       this.tableService.findTableById(tableid).subscribe((table) => {
         this.table=table;
-        this.TotalSum();
+        this.TotalSumAndName();
       })
     });
     this.ngAfterViewInit();
@@ -96,6 +104,10 @@ export class TableDialogComponent implements OnInit {
   clearTable(){
     const tableid=this.data.tableId;
     this.tableService.clearTableOfMenuItems(tableid).subscribe(() => {});
+  }
+
+  applyFilter(filterValue: string){
+    this.dataSource.filter=filterValue.trim().toLowerCase();
   }
 
 

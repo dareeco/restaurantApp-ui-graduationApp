@@ -1,13 +1,22 @@
 <body>
   <mat-toolbar class="fixed-header">
-    <button mat-icon-button (click)="navigateToOrders()" style="margin-right:1%;">
+    <button mat-icon-button (click)="navigateToOrders()" style="margin-right: 1%">
       <h1>Orders</h1>
     </button>
-    <button mat-icon-button (click)="navigateToMenuItems()" style="margin-right:5%;">
+    <button mat-icon-button >
+      <mat-icon style="height:70%; margin-right: 65%;">shelves</mat-icon>
+    </button>
+    <button mat-icon-button (click)="navigateToMenuItems()" style="margin-right:2%;">
       <h1 >Menu Items</h1>
     </button>
-    <img src="assets/images/Logo.png" class="logo-position">
-    <span style=" margin-right: 41.5%;">Bar </span>
+    <button mat-icon-button style="margin-right:5%; margin-bottom:0.3%" >
+      <mat-icon >menu_book</mat-icon>
+    </button>
+    <img src="assets/images/Logo.png" class="logo-position" style="margin-right: 25.9%;">
+    <span style=" margin-right: 40%;">Bar </span>
+    <button mat-icon-button >
+      <mat-icon style="height:70%;">local_bar</mat-icon>
+    </button>
     <span class="example-spacer"></span>
   </mat-toolbar>
 <img src="assets/images/Restaurant_image-removebg-preview.png"  class="bar-scheme">

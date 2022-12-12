@@ -27,6 +27,13 @@ export class TableService {
     return this.http.post('http://localhost:9999/api/table/add/menuItems/' + tableId,null,{params: queryParams});
   }
 
+  public removeMenuItemFromGivenTable(tableId:number, menuItemName:string){
+    let queryParams = new HttpParams();
+    queryParams = queryParams.append("name",menuItemName);
+    //Here we mustn't send null for body because it's delete http call and after the id (path) we send the request parameters!
+    return this.http.delete('http://localhost:9999/api/table/delete/menuItems/'+ tableId,{params: queryParams});
+  }
+
   public clearTableOfMenuItems(tableId: number){
     return this.http.get('http://localhost:9999/api/table/clear/' + tableId);
   }

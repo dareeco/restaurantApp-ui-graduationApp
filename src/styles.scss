@@ -68,14 +68,28 @@ mat-card-title{
   background-color: #11150C;
   top: 100vh;
 }
+.row {
+  display: flex;
+}
+.column {
+  flex: 50%;
+}
 .logo-position{
   height: 100%;
-  margin-right: 35%;
+  margin-right: 30%;
 }
 .logo-position-footer{
   height: 100%;
   margin-right: 30%;
   margin-left:24%;
+}
+.backButton:hover{
+  background-color: red;
+  color: aliceblue;
+}
+.backButton{
+  background-color: aliceblue;
+  color: red;
 }
 a:visited{
   color:#D58C3A;
@@ -84,4 +98,14 @@ a:visited{
 a{
   text-decoration: none;
 }
-
+.filterInput{
+  margin-top:-2%;
+  margin-right:0;
+  float: right;
+  height: 30%;
+  font-size: 12px;
+  scale: 0.75 0.6;
+}
+.search-color{
+  color: #D58C3A;
+}
